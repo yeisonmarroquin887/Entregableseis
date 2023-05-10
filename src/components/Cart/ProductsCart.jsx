@@ -8,19 +8,16 @@ import { getProductsCartThunk } from "../../store/slices/cart.slice";
 const ProductsCart = ({ prod, setTotalPrice, totalPrice }) => {
   const dispatch = useDispatch();
   const [counter, setCounter] = useState(prod.quantity);
-  // const [totalPrice, setTotalPrice] = useState(parseInt(prod.product.price))
   const [totalPriceByBundle, setTotalPriceByBundle] = useState(0);
 
   const handleAdd = () => {
     setCounter(counter + 1);
-    // setTotalPrice(totalPrice + parseInt(prod.product.price))
     setTotalPrice(totalPrice + Number(prod.product.price));
   };
 
   const handleMinus = () => {
     if (counter > 1) {
       setCounter(counter - 1);
-      // setTotalPrice(totalPrice - parseInt(prod.product.price))
       setTotalPrice(totalPrice - Number(prod.product.price));
     }
   };
