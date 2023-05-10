@@ -1,0 +1,60 @@
+.purchase__page {
+    display: grid;
+    gap: 5rem;
+}
+
+.tittle__purchase {
+    margin-left: 80px;
+    color: rgb(134, 127, 127);
+}
+
+.box__purchases {
+    display: grid;
+    gap: 4rem;
+}
+
+.purchase__card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.purchase__img {
+    
+    width: 60px;
+    max-height: 100px;
+}
+
+.quantity__purchase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 38, 0);
+    font-size: 1.2rem;
+    margin-left: 50%;
+    border: 1px solid black;
+    width: 50px;
+    height: 40px;
+  
+}
+
+@media (max-width: 800px) {
+    .purchase__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .tittle__purchase {
+        margin-left: 10px;
+    }
+
+    .quantity__purchase {
+        margin-left: 0;
+    }
+}
